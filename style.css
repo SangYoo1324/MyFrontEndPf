@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+li {
+    list-style: none;
+    
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    /* 위아래 마진 0 , 좌우 가운데 정렬 하고 마진 균등하게 분배 */
+
+}
+
+/* header */
+header{
+    position: fixed;
+    top:0;
+    color: black;
+    width: 100%;
+    z-index: 1;
+    /* padding: 1rem; */
+    /* 상위 요소의 1배로 하겠다 */
+
+    /* position: relative  는 자기 자신 기준으로 배치  */
+}
+
+/* header */
+header .container {
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;/* 수직정렬  */
+    
+
+}
+
+header button {
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    color: white;
+}
+
+header h1 button{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    padding:10px;
+
+}
+
+header nav ul li button{
+    font-size: 1.2rem;
+}
+
+header.active{
+    background-color: #000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+/* header */
+
+/* main  */
+main {
+    width: 100%;
+    height: 100vh;
+    /* vh는 창 크기의 n% 의 높이로 하겠다는 뜻 */
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(./images/bg.jpg.jpg) center center; 
+    background-size: cover; /* 배경에 맞게 꽉꽉 채우기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h4 {
+    font-size: 2rem;
+    
+}
+
+main h2 {
+    font-size: 3.1rem;
+    margin: 2rem 0; /* 상하 마진은 부모태그 기본마진보다 2배, 좌우마진은 0 */
+    
+}
+
+main p{
+    max-width: 500px;
+    margin: 0 auto;  /* auto는 여백을 양쪽 균등하게 배치하겟다는 뜻, 대표적인 중앙정렬 */
+   font-size: 1.25rem;
+   
+}
+
+main button.download{
+    /* button은 태그인데 download란 클래스 속성을 가진 클래스만 불러올땐 띄어쓰기 안함 */
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+}
+
+main button.mouse {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: upDown 1s ease-in-out infinite;
+}
+
+main h2 span::after{
+    content:"";
+    height: 40px;
+    width: 3px;
+    margin-left: 3px;
+    background-color: white;
+    display: inline-block;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyFrames blink {
+0%{
+opacity:1;
+}
+100%{
+    opacity:0;
+}
+}
+
+@keyframes upDown {
+    0%{
+        bottom: 1rem;
+    }
+    50%{
+        bottom: 0.5rem;
+    }
+    100%{
+        bottom: 1rem;
+    }
+}
+/* main  */
+
+
+/* section property(공통) */
+section{
+    font-family: 'Oswald', sans-serif;
+    padding: 5rem 0;
+}
+
+section:nth-child(2n){
+    background-color: lightgrey;
+}
+
+section .title{
+    margin-bottom: 3rem;
+}
+
+section .title h4{
+    font-size: 1.4rem;
+    color:  #ed4848;
+    position: relative;
+}
+
+section .title h2{
+    font-size:3.5rem;
+}
+
+section .title p{
+    font-size: 1.2rem;
+}
+/* section property(공통) */
+
+/* about me */
+section .about-self::after {
+    content: '';
+    clear: both;   /* float 속성 초기화 시켜주는 구문 */
+    display: block;
+ }
+ /* 가상클래스를 만들어서 about-self의 범위를 알게하기 위한 박스 만들어줌 */
+ 
+ section .about-self .right{
+     float:left;
+     width:50%;
+     padding: 0 2rem;
+ }
+ section .about-self .left{
+     float:left;
+     width:50%;
+ }
+ section .container .about-self .left img{
+     width: 100%;
+     height: 26rem;
+    
+ }
+ 
+ section .about-self .right h3{
+     font-size: 2.25rem;
+     margin-bottom: 1rem;
+ }
+ 
+ section .about-self .right h3 strong{
+ color:#ed4848;
+ }
+ 
+ section .about-self .right p{
+     font-size: 1.15rem;
+     margin: 1rem 0;
+     }
+  section .about-self .right .social a{
+         font-size:2.5rem;
+         margin-right: 0.4rem;
+ 
+     }
+/* about me */
+
+/* what I do  */
+section .do-me::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+
+section .do-me .do-inner{
+    width: 30%;
+    padding: 2rem;
+    background-color: lightgrey;
+    float: left;
+    margin-right: 5%;
+    cursor: pointer;
+
+}
+
+section .do-me .do-inner:last-child{
+    margin-right: 0;
+}
+
+section .do-me .do-inner .icon i{
+    font-size: 2.5rem;
+    color: #ff6a6a;
+}
+
+section .do-me .do-inner .content h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+section .do-me .do-inner .content p{
+    font-size: 1.15rem;
+}
+
+section .do-me .do-inner:hover{
+    background-color: lightcoral;
+    color:white;
+}
+
+section .do-me .do-inner:hover .icon i{
+    
+    color:white;
+}
+/* what I do  */
+
+/* background  */
+.bg{
+    background:url(./images/background.jpeg) center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 650px;
+}
+/* background  */
+
+/* portfolio  */
+section .portfoli-me .portfolio-inner{
+    width: 30%;
+    margin-right: 5%;
+    background-color: blanchedalmond;
+    float: left;
+    padding:1rem 1rem 1.5rem 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+}
+
+section .portfoli-me::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+section .portfoli-me .portfolio-inner img{
+    width:100%;
+    display: block;
+}
+section .portfoli-me .portfolio-inner:nth-child(3n){
+    margin-right:0;
+    margin-left: 0;
+}
+
+
+
+section .portfoli-me .portfolio-inner Strong{
+   color: #fa6a6a;
+   margin: 0.5rem 0;
+   display: block;
+}
+
+section .portfoli-me .portfolio-inner h3{
+    font-size: 1.75rem;
+ }
+ 
+/* portfolio */
+
+/* contact with me  */
+section .contact-me::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .contact-me .left{
+width:30%;
+float: left;
+/* height을 설정 안해도 float속성이 들오면 height은 컨텐츠 개수에 따라 자동으로 조정되고 
+왼쪽부터 컨텐츠가 자동으로 정렬된다.  */
+}
+
+section .contact-me .left .card{
+border:1px solid #ccc;
+padding: 1rem;
+display: flex;
+align-items: center;
+margin-bottom: 1.25rem;
+}
+
+section .contact-me .left .card .icon i{
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+section .contact-me .right{
+width:65%;
+float: left;
+margin-left: 5%;
+border: 1px solid #ccc;
+padding: 1rem; 
+}
+
+section .contact-me .right .form-group{
+    margin-bottom: 1.25rem;
+}
+
+section .contact-me .right .form-group label{
+    display: block;
+    margin-bottom: 0.85rem;
+}
+
+section .contact-me .right .form-group input{
+    width:100%;
+    padding: 0.6rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+section .contact-me .right .form-group textarea:focus,
+section .contact-me .right .form-group input:focus{
+    border:1px solid #719ece;
+    box-shadow: 0 0 10px;
+}
+
+section .contact-me .right .form-group textarea{
+    width:100%;
+    height: 300px;
+    outline:none;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+section .contact-me .right button{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f78b00;
+    border:none;
+    color: white;
+}
+/* contact with me  */
+
+
+/* mediaquery */
+@media screen and (max-width: 1140px){
+    main .container{
+        width:992px;
+    }
+    section .container{
+        width:600px;
+    }
+    section .about-self .left{
+        width: 100%; 
+        margin-bottom: 1.5rem;
+    }
+    section .about-self .right{
+        width: 100%;
+        padding: 0;
+    }
+
+    section .do-me .do-inner{
+        width:48%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    section .do-me .do-inner:nth-child(2n+1){
+        margin-right: 4%;
+    }
+
+    section .portfoli-me .portfolio-inner{
+        width:48%;
+        margin-right: 0;
+
+    }
+    section .portfoli-me .portfolio-inner:nth-child(2n+1){
+        margin-right: 4%;
+
+    }
+
+    section .contact-me .left{
+        width:100%;
+    }
+    section .contact-me .right{
+        width:100%;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 992px){
+    main .container{
+        width:768;
+    }
+}
+@media screen and (max-width: 768px){
+    main .container{
+        width:576;
+    }
+    section .container{
+        width:400px;
+    }
+    section .do-me .do-inner{
+        width:100%;
+
+    }
+}
+@media screen and (max-width: 576px){
+    main .container{
+        width:400px;
+    }
+    section .container{
+        width:360px;
+    }
+}
+@media screen and (max-width: 400px){
+    main .container{
+        width:320px;
+    }
+    section .container{
+        width:320px;
+    }
+}
+/* mediaquery */
