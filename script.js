@@ -56,7 +56,7 @@
 
 
 
-
+//header 항목 클릭 이벤트
 const animationMove = function(selector){
 const target = document.querySelector(selector);
 const browserScrollY = window.pageYOffset;
@@ -64,11 +64,22 @@ const targetScrollY= target.getBoundingClientRect().top+browserScrollY;
 window.scrollTo({top: targetScrollY, behavior:'smooth'});
 }
 
-//header 항목 클릭 이벤트
+
 const scrollMoveE1 =document.querySelectorAll("[data-animation-scroll='true']");
 console.log(scrollMoveE1);
 for(let i=0; i<scrollMoveE1.length; i++){
-    scrollMoveE1[i].addEventListener("click", function(e){
-animationMove(e.target.dataset.target);
+    
+    scrollMoveE1[i].addEventListener("click", function(e){    
+animationMove(this.dataset.target);
+// this= e.target 
     })
+   
 }
+
+let PortfoliioImg= document.querySelectorAll("section .portfoli-me .portfolio-inner img");
+
+PortfoliioImg.forEach(pi=>pi.addEventListener(
+    'click', (e)=>{
+        
+    }
+));

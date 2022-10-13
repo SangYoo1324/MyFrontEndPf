@@ -258,7 +258,7 @@ section .do-me::after{
 }
 
 section .do-me .do-inner{
-    width: 30%;
+    width: 25%;
     padding: 2rem;
     background-color: lightgrey;
     float: left;
@@ -315,6 +315,9 @@ section .portfoli-me .portfolio-inner{
     border: 1px solid #ccc;
     margin-bottom: 3rem;
 }
+section .portfoli-me .portfolio-inner:hover{
+    background-color:  lightslategray;
+}
 
 section .portfoli-me::after{
     content:"";
@@ -324,6 +327,7 @@ section .portfoli-me::after{
 
 section .portfoli-me .portfolio-inner img{
     width:100%;
+    height: 250px;
     display: block;
 }
 section .portfoli-me .portfolio-inner:nth-child(3n){
@@ -340,8 +344,20 @@ section .portfoli-me .portfolio-inner Strong{
 }
 
 section .portfoli-me .portfolio-inner h3{
+    margin-bottom: 1rem;
     font-size: 1.75rem;
  }
+
+ section .portfoli-me .portfolio-inner .view{
+ 
+    padding: 3px 3px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+ } 
+ section .portfoli-me .portfolio-inner .view:hover{
+    background-color: blue;
+ } 
  
 /* portfolio */
 
