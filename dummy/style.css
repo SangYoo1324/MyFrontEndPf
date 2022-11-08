@@ -1,0 +1,287 @@
+/* global */
+*{
+   
+}
+
+section{
+    background-color:black;
+    opacity:80%;
+    padding: 2rem 2rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-image: url('../images/bg_1.jpg');
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 1600px;
+
+    
+
+  
+}
+
+.fs-footer{
+    font-size: 0.7rem;
+    text-align: left;
+    letter-spacing: 4px;
+}
+.fs-footer-icon{
+    font-size: 3rem;
+    text-align: left;
+}
+
+.bg-dark{
+    opacity: 90%;
+}
+
+.row{
+    color: aliceblue;
+    text-align: center;
+}
+
+.font-weight-normal{
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+
+.font-weight-bold{
+    font-weight: bold;
+}
+/* global */
+
+/* nav-bar */
+.navbar{
+    color:aliceblue;
+    font-size: 1.5rem;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    
+    
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.nav-item:hover{
+    background-color: burlywood;
+    border-radius: 10px;
+}
+.dropdown-item:hover{
+    background-color: burlywood;
+   
+}
+.navbar-brand:hover{
+    background-color: burlywood;
+   
+}
+
+.navbar-toggler-icon{
+    background-color: transparent;
+}
+i {
+    color: aliceblue;
+    
+}
+
+#horizontal-underline{
+    position: absolute;
+    width: 98px;
+    background-color:transparent;
+    height: 4px;
+    top: 71px;
+    transition: 0.5s;
+    left:234px;
+    
+}
+
+/* nav-bar */
+
+/* main */
+main{
+    padding-top: 5rem;
+  
+}
+main .container{
+   
+    height:500px;
+}
+
+main::before{
+content:'';
+background: linear-gradient(to right,black,transparent);
+position:absolute;
+left:0;
+width:100%;
+height:500px;
+}
+main{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.jumbotron{
+    width:40%;
+    height:300px;
+    position: absolute;
+    font-size: 1.5rem;
+    text-shadow: black 0.1em 0.1em;
+    color: aliceblue;  
+    top:200px;
+    left:100px;
+    animation: slide-ani-jumbotron 1s ease-out;
+}
+ main .container img{
+    position: absolute;
+    width:40%;
+    height:500px;
+    padding-bottom: 100px;
+    top:100px;
+    
+    left:700px;
+    animation: slide-ani-pizza 1s ease-out;
+}
+
+@keyframes slide-ani-jumbotron{
+    from{
+        left:-700px;
+        opacity:0;
+    }to{
+        left: 100px;
+        opacity:1;
+    }
+}
+@keyframes slide-ani-pizza{
+    from{
+        left:-300px;
+    }to{
+        left: 700px;
+    }
+}
+
+@keyframes dissapear-ani-jumbotron{
+    from{
+        left:100px;
+    }to{
+        left:-700px;
+    }
+}
+/* main */
+
+/* section:samples */
+
+    .col-md-4 a{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .col-md-4 a:hover{
+        background-color:darkgrey;
+    }
+
+    section.samples img{
+        width:100%;
+        height:300px;
+        border-radius: 10px;
+    }
+
+    #horizontal-underline-1{
+        position: absolute;
+        width: 98px;
+        background-color:transparent;
+        height: 4px;
+        top: 400px;
+        transition: 0.5s;
+        left:234px;
+        
+    }
+/* section:samples */
+
+/* direction */
+iframe{
+    border-radius: 50px;
+}
+
+iframe:hover{
+    width:650px;
+    height:500px;
+}
+
+section.direction .container h3{
+    color: coral;
+}
+section.direction .container img{
+    width:90%;
+    height:100px;
+}
+
+section.direction .container p{
+    font-size: 1.3rem;
+    text-align: left;
+}
+/* direction */
+
+/* Footer */
+.about-us p{
+    font-size: 0.7rem;
+    font-weight: normal;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-us i{
+    font-size: 1.3rem;
+    margin: 1rem 0.5rem;
+}
+
+.services li{
+    font-size: 1rem;
+    font-weight: normal;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    line-height: 200%;
+}
+.question{
+    text-align: left;
+}
+.question span{
+    font-size: 0.8rem;
+}
+/* Footer */
+
+
+/* modal */
+.modal{
+    opacity: 90%;
+}
+
+.modal-body img{
+    width:50%;
+    height:130px;
+    float: left;
+    margin: 0 0.5rem;
+    border-radius: 50px;
+    
+}
+
+/* modal */
