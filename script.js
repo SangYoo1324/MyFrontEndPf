@@ -60,8 +60,8 @@
 const animationMove = function(selector){
 const target = document.querySelector(selector);
 const browserScrollY = window.pageYOffset;
-console.log(browserScrollY); //  현재 스크롤 위치
-console.log(target.getBoundingClientRect().top);  // target의 top이 현재 위치로부터 얼마나 떨어져 있냐
+console.log("browserScrollY: "+browserScrollY); //  현재 스크롤 위치
+console.log("getBoundingClientRect().top: "+target.getBoundingClientRect().top);  // target의 top이 현재 위치로부터 얼마나 떨어져 있냐
 
 const targetScrollY= target.getBoundingClientRect().top+browserScrollY;
 console.log(targetScrollY);
@@ -69,7 +69,7 @@ window.scrollTo({top: targetScrollY, behavior:'smooth'});
 }
 
 
-const scrollMoveE1 =document.querySelectorAll("[data-animation-scroll='true']");
+const scrollMoveE1= document.querySelectorAll("[data-animation-scroll='true']");
 console.log(scrollMoveE1);
 for(let i=0; i<scrollMoveE1.length; i++){
     
